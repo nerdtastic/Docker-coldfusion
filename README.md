@@ -1,18 +1,17 @@
 # coldfusion-docker
-ColdFusion server  using docker compose.  Swarm mode will work too just not with windows. There is a problem with the path and the shared volume.
+ColdFusion server  using docker compose.
 
 ## Installation Media
-The linux installation media is needed and can be downloaded from https://www.adobe.com/products/coldfusion/download-trial/try.html and placed in the assets folder. The Dockerfile is looking for ColdFusion_2016_WWEJ_linux64.bin.
+The linux installation media is needed and can be downloaded from https://www.adobe.com/products/coldfusion/download-trial/try.html and placed in the assets folder. The Dockerfile is looking for ColdFusion_2016_WWEJ_linux64.bin. Docker-compose is expecting the root www directory to be located here: `/Library/WebServer/Documents/www/gvsu/`
 
 ### Build
 `docker build . -t coldfusion:latest`
 
-### Run
+### Build and Run
 `docker-compose up -d cold`
-or
-`docker run -d -p 80:80 -p 8500:8500 -v coldfusion:/opt/coldfusion2016 -v /path/to/local/wwwroot:/www/gvsu/ coldfusion`
-This will create two volumes: one is a container volume (coldfusion) that will persist data between docker and workstation restarts, the second mounts the host file system to in the httpd document root.
 
 ### Admin interface
-`http://127.0.0.1/CFIDE/administrator/index.cfm`
+`http://localhost/CFIDE/administrator/index.cfm`
 
+### Coldfusion Setup
+Coldfusion required going to the admin once after installation to complete. Coldfusion settings can be edited or using a <a href="https://helpx.adobe.com/coldfusion/configuring-administering/deploying-coldfusion-applications.html" target="_blank">.car</a> file to import settings from a previous coldfusion installation.

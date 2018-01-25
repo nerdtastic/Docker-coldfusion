@@ -1,0 +1,13 @@
+version: '3.2'
+services:
+  cold:
+    build: ./build
+    image: coldfusion
+    ports: 
+      - "80:80"
+      - "8500:8500"
+    volumes:
+      - /Library/WebServer/Documents/www/gvsu/:/www/gvsu/
+      - coldfusion:/opt/coldfusion2016
+volumes:
+ coldfusion:

@@ -1,14 +1,11 @@
-# coldfusion-docker
-ColdFusion server  using docker compose. Based on the latest <a href="https://hub.docker.com/_/centos/" target="_blank">centos</a> image.
-
 ## Installation Media
-The linux installation media is needed and can be downloaded from https://www.adobe.com/products/coldfusion/download-trial/try.html and placed in the assets folder. The Dockerfile is looking for ColdFusion_2016_WWEJ_linux64.bin. Docker-compose is expecting the root www directory to be located here: `/Library/WebServer/Documents/www/gvsu/`
+The linux installation media is needed and can be downloaded from https://www.adobe.com/products/coldfusion/download-trial/try.html and placed in the assets folder. The Dockerfile is looking for ColdFusion_2016_WWEJ_linux64.bin. Docker-compose is expecting the root www directory to be located here: `/Library/WebServer/Documents/www/gvsu/`. Might want to export any current coldfusion settings and put the file in your webroot.
 
-### Build
-`docker build . -t coldfusion:latest`
+## Install Docker-sync
+`gem install docker-sync`
 
 ### Build and Run
-`docker-compose up -d cold`
+`docker-compose up`
 
 ### Admin interface
 `http://localhost/CFIDE/administrator/index.cfm`

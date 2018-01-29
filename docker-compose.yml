@@ -1,13 +1,18 @@
 version: '3.2'
 services:
+  unison:
+    image: alpine
+    container_name: 'unison'
   cold:
     build: ./build
     image: coldfusion
+    container_name: 'coldfusion_server'
     ports: 
       - "80:80"
       - "8500:8500"
     volumes:
-      - /Library/WebServer/Documents/www/gvsu/:/www/gvsu/
+      - www-sync:/www/gvsu/:nocopy
       - coldfusion:/opt/coldfusion2016
 volumes:
- coldfusion:
+  coldfusion:
+  www-sync: {external: true}

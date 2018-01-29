@@ -1,7 +1,7 @@
 version: '3.2'
 services:
   unison:
-    image: alpine
+    image: eugenmayer/unison
     container_name: 'unison'
   cold:
     build: ./build
@@ -14,5 +14,5 @@ services:
       - www-sync:/www/gvsu/:nocopy
       - coldfusion:/opt/coldfusion2016
 volumes:
-  coldfusion:
+  coldfusion: {external: true}
   www-sync: {external: true}

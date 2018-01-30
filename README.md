@@ -11,7 +11,8 @@ Do this after install docker and before the first run of docker-sync<br />
 
 ### Build/Run
 Start the file syncing container AND Start the coldfusion container<br />
-`docker-sync start` `docker-compose up`<br />
+`docker-sync start`<br />
+`docker-compose up`<br />
 OR Start everything<br />
 `docker-sync-stack start`
 

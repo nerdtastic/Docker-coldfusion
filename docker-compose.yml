@@ -1,8 +1,5 @@
 version: '3.2'
 services:
-  unison:
-    image: eugenmayer/unison
-    container_name: 'unison'
   cold:
     build: ./build
     image: coldfusion

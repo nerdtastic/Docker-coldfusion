@@ -2,10 +2,14 @@
 
 /usr/sbin/httpd -k start
 echo 'Apache started'
-
 /opt/coldfusion2016/cfusion/bin/coldfusion start
 
-echo 'The ColdFusion 2016 server is started.'
+/usr/sbin/httpd -k stop
+echo 'Apache stopped'
+/opt/coldfusion2016/cfusion/bin/coldfusion stop
 
+/usr/sbin/httpd -k start
+echo 'Apache started'
+/opt/coldfusion2016/cfusion/bin/coldfusion start
 
 tail -f /dev/null

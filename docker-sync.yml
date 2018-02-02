@@ -1,10 +1,11 @@
 version: '2'
 options:
-  verbose: true
+  verbose: false
 syncs:
   www-sync:
     notify_terminal: true
     src: '/Library/WebServer/Documents/www/gvsu'
     sync_strategy: 'native_osx'
+    sync_args: ""
     sync_prefer: 'default'
     watch_excludes: ['.DS_Store','.*/.git', '.*/node_modules', '.*/bower_components', '.*/sass-cache', '.*/.sass-cache', '.*/.sass-cache', '.coffee', '.scss', '.sass', '.gitignore']

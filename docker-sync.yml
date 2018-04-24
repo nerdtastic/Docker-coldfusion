@@ -4,7 +4,7 @@ options:
 syncs:
   www-sync:
     notify_terminal: true
-    src: '/Library/WebServer/Documents/www/gvsu'
+    src: '/Users/thomaspikes/Documents/Work/webroot/gvsu'
     sync_strategy: 'native_osx'
     sync_args: "-copyonconflict -debug verbose"
     sync_prefer: 'default'

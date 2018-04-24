@@ -1,11 +1,7 @@
 #!/bin/bash
 
-/usr/sbin/httpd -k stop
-echo 'Apache stopped'
-/opt/coldfusion2016/cfusion/bin/coldfusion stop
-
-/usr/sbin/httpd -k start
+/usr/sbin/httpd -k restart
 echo 'Apache started'
-/opt/coldfusion2016/cfusion/bin/coldfusion start
+/opt/coldfusion2016/cfusion/bin/coldfusion restart
 
 tail -f /dev/null

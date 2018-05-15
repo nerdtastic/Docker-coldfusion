@@ -10,6 +10,7 @@ Do this after installing docker and before the first run of docker-sync<br />
 `docker volume create www-sync`
 
 ### Edit www root
+Set the wwwroot to be shared from your local machine to the docker container<br />
 `syncs:
 	www-sync:
 		yoursource`

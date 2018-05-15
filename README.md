@@ -5,17 +5,17 @@ The linux installation media is needed and can be downloaded from https://www.ad
 `gem install docker-sync`
 
 ### Create External Docker Volumes
-Do this after installing docker and before the first run of docker-sync<br />
+Do this after installing docker and before the first run of docker-sync.<br />
 `docker volume create coldfusion`<br />
 `docker volume create www-sync`
 
 ### Edit www root
-Set the wwwroot to be shared from your local machine to the docker container<br />
+Set the wwwroot to be shared from your local machine to the docker container.<br />
 `syncs:
 	www-sync:
 		yoursource`
 ### Build/Run
-Start the file syncing container AND Start the coldfusion container<br />
+Start the file syncing container AND Start the coldfusion container.<br />
 `docker-sync start`<br />
 `docker-compose up`<br />
 OR Start everything<br />

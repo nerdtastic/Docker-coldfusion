@@ -2,7 +2,7 @@
 <a href="https://docs.docker.com/install/" target="_blank">Docker</a>
 
 ### Clone this repo
-`git clone https://github.com/nerdtastic/Docker-coldfusion.git coldfusion`
+`git clone https://github.com/nerdtastic/Docker-coldfusion.git coldfusion`<br />
 `cd coldfusion`
 
 ### Installation Media
@@ -14,8 +14,8 @@ Place the installation media in `coldfusion/build/assets`
 `gem install docker-sync`
 
 ### Create External Docker Volumes
-Do this after installing docker and before the first run of docker-sync.
-`docker volume create coldfusion`
+Do this after installing docker and before the first run of docker-sync.<br />
+`docker volume create coldfusion`<br />
 `docker volume create www-sync`
 
 ### Edit www root
@@ -34,5 +34,5 @@ OR Start everything<br />
 `docker-sync-stack start`
 
 ### Admin interface
-`http://localhost:8500/CFIDE/administrator/index.cfm`
+`http://localhost:8500/CFIDE/administrator/index.cfm`<br />
 You'll have to guess the password. Its a really obvious terrible <strong>password</strong>, promise :)

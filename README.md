@@ -25,8 +25,8 @@ Set the wwwroot to be shared from your local machine to the docker-sync containe
 		yoursource`
 
 ### Build/Run
-Build the coldfusion container
-`docker-compose build`
+Build the coldfusion container<br />
+`docker-compose build`<br />
 Start the file syncing container AND Start the coldfusion container.<br />
 `docker-sync start`<br />
 `docker-compose up`<br />

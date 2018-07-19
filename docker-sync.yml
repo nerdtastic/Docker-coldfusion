@@ -1,0 +1,15 @@
+version: '2'
+options:
+  verbose: false
+syncs:
+  www-sync:
+    notify_terminal: true
+    src: '/Users/thomaspikes/Documents/Work/webroot/gvsu'
+    sync_strategy: 'native_osx'
+    sync_args: "-copyonconflict -debug verbose"
+    sync_prefer: 'default'
+    sync_userid: '48'
+    sync_group: 'apache'
+    sync_groupid: '48'
+
+    watch_excludes: ['.DS_Store','.*/.git', '.*/node_modules', '.*/bower_components', '.*/sass-cache', '.*/.sass-cache', '.*/.sass-cache', '.coffee', '.scss', '.sass', '.gitignore']

@@ -4,4 +4,4 @@
 echo 'Apache started'
 /opt/coldfusion2016/cfusion/bin/coldfusion restart
 
-tail -f /dev/null
+tail -f /opt/coldfusion2016/cfusion/logs/coldfusion-out.log

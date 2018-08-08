@@ -11,5 +11,5 @@ syncs:
     sync_userid: '48'
     sync_group: 'apache'
     sync_groupid: '48'
-
-    watch_excludes: ['.DS_Store','.*/.git', '.*/node_modules', '.*/bower_components', '.*/sass-cache', '.*/.sass-cache', '.*/.sass-cache', '.coffee', '.scss', '.sass', '.gitignore']
+    sync_excludes: ['.git','.gitignore','gitignoreglobal']
+    watch_excludes: ['.git','.gitignore','gitignoreglobal']

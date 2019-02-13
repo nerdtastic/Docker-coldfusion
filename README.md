@@ -15,7 +15,7 @@ Do this after installing docker and before the first run of docker-sync.<br />
 `docker volume create coldfusion`
 
 ### Edit www root
-Set the wwwroot to be shared from your local machine to the docker-sync container here `coldfusion/docker-compose.yml`.
+Set the wwwroot to be shared from your local machine to the docker-sync container here `coldfusion/docker-compose.yml`.<br />
 `services:
 	volumes:
 		hostsource:guestmachinehost:cached`

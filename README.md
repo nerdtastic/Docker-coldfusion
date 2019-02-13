@@ -10,28 +10,21 @@ The linux coldfusion installation media is needed and can be downloaded from htt
 
 Place the installation media in `coldfusion/build/assets`
 
-### Install Docker-sync
-`gem install docker-sync`
-
 ### Create External Docker Volumes
 Do this after installing docker and before the first run of docker-sync.<br />
-`docker volume create coldfusion`<br />
-`docker volume create www-sync`
+`docker volume create coldfusion`
 
 ### Edit www root
-Set the wwwroot to be shared from your local machine to the docker-sync container here `coldfusion/docker-sync.yml`.
-`syncs:
-	www-sync:
-		yoursource`
+Set the wwwroot to be shared from your local machine to the docker-sync container here `coldfusion/docker-compose.yml`.
+`services:
+	volumes:
+		hostsource:guestmachinehost:cached`
 
 ### Build/Run
 Build the coldfusion container<br />
 `docker-compose build`<br />
-Start the file syncing container AND Start the coldfusion container.<br />
-`docker-sync start`<br />
-`docker-compose up`<br />
-OR Start everything<br />
-`docker-sync-stack start`
+Start the coldfusion container.<br />
+`docker-compose up`
 
 ### Admin interface
 `http://localhost:8500/CFIDE/administrator/index.cfm`<br />

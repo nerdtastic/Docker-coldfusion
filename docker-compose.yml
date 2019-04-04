@@ -6,10 +6,9 @@ services:
     container_name: 'coldfusion2018_server'
     ports:
       - "80:80"
-      - "8500:8500"
+      - "8585:8500"
     volumes:
-      - www-sync:/www/gvsu/:nocopy
+      - /Users/thomaspikes/Documents/Work/webroot/gvsu:/www/gvsu/:cached
       - coldfusion2018:/opt/coldfusion2018
 volumes:
   coldfusion2018: {external: true}
-  www-sync: {external: true}

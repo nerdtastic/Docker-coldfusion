@@ -30,7 +30,6 @@ RUN rm ColdFusion_2018_WWEJ_linux64.bin && \
 RUN chown apache:apache /www/gvsu
 
 RUN yum -y --setopt=tsflags=nodocs install epel-release && \
-    yum -y --setopt=tsflags=nodocs install nodejs && \
     yum clean all && \
     rm -rf /var/cache/yum
 

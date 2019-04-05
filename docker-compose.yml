@@ -4,12 +4,11 @@ services:
     build: ./build
     image: coldfusion
     container_name: 'coldfusion_server'
-    ports: 
+    ports:
       - "80:80"
       - "8500:8500"
     volumes:
-      - www-sync:/www/gvsu/:nocopy
+      - /Users/thomaspikes/Documents/Work/webroot/gvsu:/www/gvsu/:cached
       - coldfusion:/opt/coldfusion2016
 volumes:
   coldfusion: {external: true}
-  www-sync: {external: true}
